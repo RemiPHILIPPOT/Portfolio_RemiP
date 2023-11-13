@@ -47,7 +47,9 @@ const ProjectList: React.FC = () => {
                 className={`project-card ${showFullContent ? "expanded" : ""}`}
                 key={id}
             >
-                <h3>{title}</h3>
+                {/* <h3>{title}</h3> */}
+                <img src={image} alt={`Capture d'écran de ${title}`} />
+
                 <p className="description">
                     {showFullContent
                         ? description
@@ -56,7 +58,7 @@ const ProjectList: React.FC = () => {
                 <p className="technologies">
                     Technologies : {technologies.join(", ")}
                 </p>
-                <img src={image} alt={`Capture d'écran de ${title}`} />
+                {/* <img src={image} alt={`Capture d'écran de ${title}`} /> */}
                 {!showFullContent && (
                     <button className="see-more" onClick={toggleContent}>
                         Voir plus
@@ -67,14 +69,18 @@ const ProjectList: React.FC = () => {
                         Voir moins
                     </button>
                 )}
-                <a
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-link"
-                >
-                    Voir le projet
-                </a>
+                {link !== "" ? (
+                    <a
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-link"
+                    >
+                        Voir le projet
+                    </a>
+                ) : (
+                    ""
+                )}
             </div>
         );
     };

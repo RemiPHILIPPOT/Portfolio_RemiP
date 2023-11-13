@@ -55,51 +55,111 @@
         },
         {
             "id": 6,
-            "title": "Projet 1",
-            "description": "Description du projet 1.",
-            "technologies": ["React", "Node.js"],
-            "image": "project1.jpg",
-            "link": "https://example.com/project1"
+            "title": "Billed App",
+            "description": "Billed est une entreprise qui produit des solutions Saas destinées aux équipes RH. L'objectif est de mettre en place des tests.",
+            "task": "Rédiger des tests unitaires, d'intégration et End-to-End. Présenter un rapport de test Jest",
+            "technologies": ["JS", "JEST", "NPM", "HTML", "CSS"],
+            "image": "../src/logo/billedapp.png",
+            "link": "https://github.com/RemiPHILIPPOT/RemiPHILIPPOT_9_26032021"
         },
         {
             "id": 7,
-            "title": "Projet 1",
-            "description": "Description du projet 1.",
-            "technologies": ["React", "Node.js"],
-            "image": "project1.jpg",
-            "link": "https://example.com/project1"
+            "title": "Learn@home",
+            "description": "Définir les besoins pour une application de soutien scolaire. Pour cela je dois valider le cadrage du projet avec le client avant de démarrer le développement fonctionnel.",
+            "technologies": ["NOTION", "FIGMA", "GITHUB"],
+            "image": "../src/logo/learnathome.png",
+            "link": ""
         },
         {
             "id": 8,
-            "title": "Projet 1",
-            "description": "Description du projet 1.",
-            "technologies": ["React", "Node.js"],
-            "image": "project1.jpg",
-            "link": "https://example.com/project1"
+            "title": "Kasa",
+            "description": "Kasa est leader dans la location d'appartements entre particulier et à été codé il y a plus de 10 ans en ASP.NET. L'entreprise souhaite une refonte totale pour passer en stack JavaScript / NodeJS et React avec de nouvelles maquettes",
+            "task": "Création de composants React (Banner, Card, Carousel, Dropdown, Footer, Header, Host, Rating, Tag) et utilisation des props entre les composants Création d'un composant carousel d'image avec boucle infinie à l'aide des states de React. Création d'un composant collapse, avec réinitialisation de l'état à rafraichissement du cycle de la vie de React. Utilisation du state dans les composants. Les Routes sont gérés par React Router dans l'URL.",
+            "technologies": [
+                "React",
+                "JS",
+                "REACT ROUTER",
+                "SASS",
+                "GITHUB",
+                "HTML",
+                "CSS",
+                "W3C",
+                "NPM",
+                "FIGMA"
+            ],
+            "image": "./src/logo/kasa.svg",
+            "link": "https://github.com/RemiPHILIPPOT/RemiPHILIPPOT_11_26032021"
         },
         {
             "id": 9,
-            "title": "Projet 1",
-            "description": "Description du projet 1.",
-            "technologies": ["React", "Node.js"],
-            "image": "project1.jpg",
-            "link": "https://example.com/project1"
+            "title": "SportSee",
+            "description": "SportSee est une startup dédiée au coaching sportif, il souhaite lancer une nouvelle page pour permettre aux utilisateurs de suivre le nombre de sessions réalisées ainsi que le nombre de calories brulées",
+            "task": "Création du projet en React, récupération des données auprès d'une API. Création et affichage des graphiques avec Recharts(BarChart, RadarChart, LineChart, PieChart). Customisation des graphes avec styled-components. Modélisation de classe transformant chacune des données de l'API au format attendu par Recharts. Gestion du routing avec react-router et affichage des données de l'API suivant l'utilisateur connecté. Création et affichage d'une page Error si l'url ne correspond pas à une route avec react-router. Réaliser une documentation technique pour une application ",
+            "technologies": [
+                "React",
+                "JS",
+                "REACT ROUTER",
+                "RECHARTS",
+                "GITHUB",
+                "HTML",
+                "CSS",
+                "NPM"
+            ],
+            "image": "./src/logo/sportsee.svg",
+            "link": "https://github.com/RemiPHILIPPOT/RemiPHILIPPOT_12_26032021"
         },
         {
             "id": 10,
-            "title": "Projet 1",
-            "description": "Description du projet 1.",
-            "technologies": ["React", "Node.js"],
-            "image": "project1.jpg",
-            "link": "https://example.com/project1"
+            "title": "Argent Bank",
+            "description": "ArgentBank est une nouvelle banque qui démarre et souhaite créer une application web permettant aux clients de se connecter et de gérer leur comptes et leur profil. Ensuite il faudra spécifier les endpoints d'API nécessaires pour une deuxième phase pour gérer les transactions",
+            "task": "Installation du projet (Node.js & MongoDB Atlas), Génération de la base de donnée, lancement du serveur. Transformation des fichiers HTML en React, connexion fonctionnelle aux API. Mise en place de Redux, création du store composé de Reducers et Actions. Propagation des informations(dispatch), stockage du JWT dans le local Storage. Récupération des informations propagés. Etude des besoins et création de la documentation technique avec Swagger",
+            "technologies": [
+                "React",
+                "NODE.JS",
+                "REACT ROUTER",
+                "STYLED COMPONENTS",
+                "MONGODB",
+                "REDUX",
+                "NPM",
+                "GITHUB"
+            ],
+            "image": "./src/logo/argentBankLogo.png",
+            "link": "https://github.com/RemiPHILIPPOT/Project-10-Bank-API"
         },
         {
             "id": 11,
-            "title": "Projet 1",
-            "description": "Description du projet 1.",
-            "technologies": ["React", "Node.js"],
-            "image": "project1.jpg",
-            "link": "https://example.com/project1"
+            "title": "WealthHealth",
+            "description": "WealthHealth est une entreprise qui utilise une application web interne qui gère les dossiers des employés. Refondre une application jQuery avec un design ancien et des données sauvegardé uniquement à travers le localstorage. Mon rôle à été de transformer ce projet vers une stack React - Redux, en optimisant au possible le design, ainsi que les performances globale sur le navigateur.",
+            "task": "Mettre en place le projet avec React, composant à transformer (dialog). Mise en place de Redux(actions et reducers).Publication d'un package sur npm (création d'une librairie React) Passer les props en paramètre, faire une documentation pour une librairie, configurer la compilation et publication sur npm. Création d'un formulaire avec multiples composants (Select, Input, DateInput, Button) avec l'aide de Material UI. Création d'une page liste des données sauvegardées affichées sous forme de tableau avec tri, recherche et pagination. Navigation entre les pages avec React Router Analyser la performance avec Lighthouse",
+            "technologies": [
+                "React",
+                "MATERIAL UI",
+                "REACT ROUTER",
+                "STYLED COMPONENTS",
+                "GITHUB",
+                "VITEJS",
+                "REDUX",
+                "FIGMA",
+                "NPM",
+                "W3C"
+            ],
+            "image": "./src/logo/wealth_health_logo.png",
+            "link": "https://github.com/RemiPHILIPPOT/RemiPHILIPPOT_14_26032021"
+        },
+        {
+            "id": 12,
+            "title": "Les Jolies Brindilles",
+            "description": "Création d'une charte graphique et d'un site vitrine pour une fleuriste",
+            "task": "Création de la charte graphique (logo, signature de mails, couleurs). Création de composant réutilisable avec REACT (galerie d'images, produit à mettre en avant, header, footer). Création de la page web et hébergement sur Netlify. Création d'un formulaire avec envoie de mail lors de validation. Gestion seo",
+            "technologies": [
+                "React",
+                "STYLED COMPONENTS",
+                "GITHUB",
+                "NETLIFY",
+                "FIGMA"
+            ],
+            "image": "./src/logo/logolesjoliesbrindilles.png",
+            "link": "https://github.com/RemiPHILIPPOT/lesjoliesbrindilles-react"
         }
     ],
     "author": {

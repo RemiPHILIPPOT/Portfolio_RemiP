@@ -23,14 +23,17 @@
 
 .project-card img {
     width: 100%;
-    height: auto;
     max-width: 80%;
-    border-bottom: 1px solid #ccc;
+    height: 100%;
+    max-height: 10vh;
+    object-fit: contain;
+    margin-top: 1rem;
 }
 
 .project-card .description {
     padding: 15px;
     overflow: hidden;
+    border-top: 1px solid #ccc;
 }
 
 .project-card .technologies {
@@ -69,6 +72,7 @@
 
 .project-card .project-link {
     display: block;
+    height: 60px;
     text-align: center;
     text-decoration: none;
     padding: 8px;
