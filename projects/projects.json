@@ -1,0 +1,110 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "Reservia",
+            "description": "Reservia est une application de plannification de vacances. Le site permet aux utilisateurs de trouver des hébergements et des activités dans la ville de leur choix. Les hébergements peuvent également être filtrés par thématique, budget ou ambiance. L'entreprise decide de réaliser un prototype",
+            "task": "Rendre le site responsive, utilisation de Grid, versionner le code avec Git, deployer le site sur Github Pages. Utilisation de balises sémantiques",
+            "technologies": ["HTML", "CSS", "GITHUB"],
+            "image": "../src/logo/Reservia.svg",
+            "link": "https://github.com/RemiPHILIPPOT/RemiPhilippot_2_26032021"
+        },
+        {
+            "id": 2,
+            "title": "Ohmyfood",
+            "description": "Ohmyfood! est une entreprise de commande de repas en ligne. Le site permet aux utilisateurs de composer leur propre menu et réduire leur temps d'attente dans les restaurants.",
+            "task": "Developpement à faire sans Javascript ni framework. Rendre le site responsive et passage de l'HTML et CSS au W3C sans erreur Conception d'effets graphiques et d'animations en css pure (éclaircissement de boutons, bouton 'like', loading spinner, validation de plats)",
+            "technologies": ["HTML", "CSS", "W3C", "GITHUB"],
+            "image": "../src/logo/ohmyfood.png",
+            "link": "https://github.com/RemiPHILIPPOT/RemiPhilippot_3_26032021"
+        },
+        {
+            "id": 3,
+            "title": "GameOn",
+            "description": "GameOn est une entreprise spécialisée dans les conférences et les concours de jeux. Le site permet aux utilisateurs de s'inscrire aux événements gamings.",
+            "task": "Initialiser le projet à partir d'un repository Github Forké. Création d'un formulaire d'inscription. Ajouter une fonctionnalité à un bouton 'x' avec Javascript pour fermer une modale. Le formulaire doit être valide quand l'utilisateur clique sur Submit, les données doivent être saisie correctement. Ajouter des messages d'erreurs lorsque les entrées du formulaire ne sont pas correct. Envoyer une confirmation lorsque l'envoie du formulaire est réussi",
+            "technologies": ["HTML", "CSS", "JS", "W3C", "GITHUB"],
+            "image": "../src/logo/gameOn.png",
+            "link": "https://github.com/RemiPHILIPPOT/GameOn-website-FR"
+        },
+        {
+            "id": 4,
+            "title": "FishEye",
+            "description": "FishEye est un site web pour les photographes freelances qui leur permet d'avoir une plateforme unique pour montrer leurs photos et rentrer en contact avec eux. L'objectif est de transformer un site statique qui à été construit il y a plus de 10 ans en un site dynamique.",
+            "task": "Utilisation de la programmation orientée objet. Récupérer de manière asynchrone les données d'un JSON. Utilisation de la méthode Filter pour filter les photographes par tags dans la page d'accueil. Création d'un bouton 'like' permettant d'ajouter ou supprimer un nombre de 'j'aime' sur chaque photo",
+            "technologies": ["HTML", "CSS", "JS", "W3C", "GITHUB"],
+            "image": "../src/logo/fishEye.svg",
+            "link": "https://github.com/RemiPHILIPPOT/RemiPHILIPPOT-RemiPHILIPPOT_6_26032021"
+        },
+        {
+            "id": 5,
+            "title": "Les Petits Plats",
+            "description": "Après avoir édité des livres de cuisine, l'entreprise prend la décision de réaliser un site de recettes de cuisine. L'objectif est de développer un algorithme de recherche en JavaScript",
+            "task": "Respecter la maquette FIGMA. Gérer dynamiquement les recettes et les filtres sur le site. Implémenter une fonctionnalité de recherche via une barre de recherche et des filtres. Rendre le site responsive. Utilisation de la programmation fonctionnelle et de boucles natives. Utiliser JSBENCH.CH pour comparer les performances.",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JS",
+                "W3C",
+                "GITHUB",
+                "FIGMA",
+                "BOOTSTRAP"
+            ],
+            "image": "../src/logo/lespetitsplats.svg",
+            "link": "https://github.com/RemiPHILIPPOT/RemiPHILIPPOT_7_26032021"
+        },
+        {
+            "id": 6,
+            "title": "Projet 1",
+            "description": "Description du projet 1.",
+            "technologies": ["React", "Node.js"],
+            "image": "project1.jpg",
+            "link": "https://example.com/project1"
+        },
+        {
+            "id": 7,
+            "title": "Projet 1",
+            "description": "Description du projet 1.",
+            "technologies": ["React", "Node.js"],
+            "image": "project1.jpg",
+            "link": "https://example.com/project1"
+        },
+        {
+            "id": 8,
+            "title": "Projet 1",
+            "description": "Description du projet 1.",
+            "technologies": ["React", "Node.js"],
+            "image": "project1.jpg",
+            "link": "https://example.com/project1"
+        },
+        {
+            "id": 9,
+            "title": "Projet 1",
+            "description": "Description du projet 1.",
+            "technologies": ["React", "Node.js"],
+            "image": "project1.jpg",
+            "link": "https://example.com/project1"
+        },
+        {
+            "id": 10,
+            "title": "Projet 1",
+            "description": "Description du projet 1.",
+            "technologies": ["React", "Node.js"],
+            "image": "project1.jpg",
+            "link": "https://example.com/project1"
+        },
+        {
+            "id": 11,
+            "title": "Projet 1",
+            "description": "Description du projet 1.",
+            "technologies": ["React", "Node.js"],
+            "image": "project1.jpg",
+            "link": "https://example.com/project1"
+        }
+    ],
+    "author": {
+        "firstName": "Rémi",
+        "lastName": "Philippot",
+        "description": "Developpeur"
+    }
+}

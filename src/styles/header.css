@@ -1,0 +1,18 @@
+.logo {
+    width: 5vw;
+    object-fit: contain;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    height: 7vw;
+    justify-content: space-between;
+}
+.header_nav ul {
+    display: flex;
+    list-style: none;
+}
+.header_link {
+    margin-left: 3rem;
+}

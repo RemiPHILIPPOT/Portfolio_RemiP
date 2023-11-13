@@ -1,0 +1,81 @@
+/* projectList.css */
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    width: 19vw;
+    max-height: 233vh;
+    overflow: hidden;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    max-width: 80%;
+    border-bottom: 1px solid #ccc;
+}
+
+.project-card .description {
+    padding: 15px;
+    overflow: hidden;
+}
+
+.project-card .technologies {
+    padding: 0 15px;
+}
+
+.project-card .see-more {
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.project-card .see-more:hover {
+    background-color: #0056b3;
+}
+
+.project-card .see-less {
+    cursor: pointer;
+    background-color: #dc3545;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.project-card .see-less:hover {
+    background-color: #bb2d3b;
+}
+
+.project-card .project-link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.project-card .project-link:hover {
+    color: #0056b3;
+}
