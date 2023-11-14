@@ -18,7 +18,6 @@ const ProjectList: React.FC = () => {
             try {
                 const response = await fetch("/projects/projects.json");
                 const data = await response.json();
-                console.log("Data from JSON:", data);
                 setProjects(data.projects);
             } catch (error) {
                 console.error("Error fetching projects:", error);

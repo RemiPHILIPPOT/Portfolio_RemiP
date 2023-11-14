@@ -28,7 +28,6 @@ const Header: React.FC = () => {
             try {
                 const response = await fetch("/projects/projects.json");
                 const data = await response.json();
-                console.log("Data from JSON:", data);
                 setAuthor(data.author);
             } catch (error) {
                 console.error("Error fetching author:", error);
