@@ -1,8 +1,8 @@
 // Header.tsx
 import React, { useEffect, useState } from "react";
-import "../src/styles/header.css";
+import "../styles/header.css";
 import { Link } from "react-router-dom";
-import LogoRp from "../src/logo/logo_rp.png";
+import LogoRp from "../logo/logo_rp.png";
 
 interface Author {
     firstName: string;
@@ -26,7 +26,7 @@ const Header: React.FC = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch("/projects/projects.json");
+                const response = await fetch("src/projects/projects.json");
                 const data = await response.json();
                 setAuthor(data.author);
             } catch (error) {

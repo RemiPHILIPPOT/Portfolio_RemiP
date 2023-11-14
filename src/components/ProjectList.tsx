@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../src/styles/projectList.css";
+import "../styles/projectList.css";
 
 interface Project {
     id: number;
@@ -16,7 +16,7 @@ const ProjectList: React.FC = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch("/projects/projects.json");
+                const response = await fetch("src/projects/projects.json");
                 const data = await response.json();
                 setProjects(data.projects);
             } catch (error) {
