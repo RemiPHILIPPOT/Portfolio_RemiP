@@ -86,8 +86,10 @@ const ProjectList: React.FC = () => {
     };
 
     return (
-        <div>
-            <h2>Mes Projets</h2>
+        <div className="project">
+            <div className="project_title">
+                <span className="wave">Mes Projets</span>
+            </div>
             <div className="project-container">
                 {projects.map((project) => (
                     <ProjectCard key={project.id} {...project} />

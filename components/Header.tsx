@@ -8,6 +8,10 @@ interface Author {
     firstName: string;
     lastName: string;
     description: string;
+    github: string;
+    githubLogo: string;
+    linkedin: string;
+    linkedinLogo: string;
 }
 
 const Header: React.FC = () => {
@@ -54,6 +58,22 @@ const Header: React.FC = () => {
                 <div className="author-info">
                     <h2>{`${author.firstName} ${author.lastName}`}</h2>
                     <p>{author.description}</p>
+                    <div className="author_social">
+                        <a className="author_link" href={author.github}>
+                            <img
+                                className="author_logo"
+                                src={author.githubLogo}
+                                alt="Logo Github"
+                            />
+                        </a>
+                        <a className="author_link" href={author.linkedin}>
+                            <img
+                                className="author_logo"
+                                src={author.linkedinLogo}
+                                alt="Logo Linkedin"
+                            />
+                        </a>
+                    </div>
                 </div>
             )}
         </header>

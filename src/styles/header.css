@@ -1,5 +1,5 @@
 .logo {
-    width: 5vw;
+    /* width: 5vw; */
     object-fit: contain;
 }
 .header {
@@ -15,4 +15,18 @@
 }
 .header_link {
     margin-left: 3rem;
+}
+.header_nav {
+    display: none;
+}
+.author_social {
+    display: flex;
+    justify-content: space-evenly;
+}
+.author_logo {
+    width: 30px;
+    transition: filter 0.3s ease-in-out;
+}
+.author_logo:hover {
+    filter: invert(100%);
 }

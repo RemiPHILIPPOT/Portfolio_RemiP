@@ -165,6 +165,10 @@
     "author": {
         "firstName": "Rémi",
         "lastName": "Philippot",
-        "description": "Developpeur"
+        "description": "Developpeur Front-End React",
+        "github": "https://github.com/RemiPHILIPPOT",
+        "githubLogo": "./src/assets/github-mark-white.svg",
+        "linkedin": "https://www.linkedin.com/in/rphilippot/",
+        "linkedinLogo": "./src/assets/logoLinkedin.png"
     }
 }
