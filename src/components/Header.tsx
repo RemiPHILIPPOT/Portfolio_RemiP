@@ -50,7 +50,6 @@ const Header: React.FC = () => {
                     <li className="header_link">
                         <Link to="/projects">Projets</Link>
                     </li>
-                    {/* Ajoutez d'autres liens selon votre besoin */}
                 </ul>
             </nav>
             {author && (
