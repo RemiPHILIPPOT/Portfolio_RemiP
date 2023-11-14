@@ -1,7 +1,7 @@
 // Header.tsx
 import React, { useEffect, useState } from "react";
 import "../src/styles/header.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import LogoRp from "../src/logo/logo_rp.png";
 
 interface Author {
@@ -15,11 +15,11 @@ interface Author {
 }
 
 const Header: React.FC = () => {
-    const navigate = useNavigate();
+    /*const navigate = useNavigate();
 
     const handleNavigation = (to: string) => {
         navigate(to);
-    };
+    };*/
 
     const [author, setAuthor] = useState<Author | null>(null);
 
