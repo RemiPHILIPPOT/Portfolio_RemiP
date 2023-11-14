@@ -26,9 +26,7 @@ const Header: React.FC = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(
-                    "https://main--polite-palmier-1b1699.netlify.app/projects/projects.json"
-                );
+                const response = await fetch("../src/projects/projects.json");
                 const data = await response.json();
                 setAuthor(data.author);
             } catch (error) {
