@@ -1,5 +1,9 @@
-import { Box, Flex, Heading, Text, Button } from "@chakra-ui/react";
+import { Flex, Heading, Text, Button } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+
+interface FullScreenIntroProps {
+    onEnter: () => void;
+}
 
 // Variants pour les animations
 const containerVariants = {
@@ -15,7 +19,7 @@ const itemVariants = {
     visible: { opacity: 1, y: 0 },
 };
 
-const FullScreenIntro = ({ onEnter }) => {
+const FullScreenIntro: React.FC<FullScreenIntroProps> = ({ onEnter }) => {
     return (
         <Flex
             as={motion.div}

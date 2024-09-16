@@ -1,5 +1,4 @@
 import { Box, Flex, Heading, Text, keyframes } from "@chakra-ui/react";
-import React from "react";
 
 // Animation keyframes
 const fadeIn = keyframes`
