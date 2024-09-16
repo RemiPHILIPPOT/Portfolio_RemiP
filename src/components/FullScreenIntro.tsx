@@ -16,7 +16,12 @@ const containerVariants = {
 
 const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
+
+const lastItemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 4 } }, // Plus long délai
 };
 
 const FullScreenIntro: React.FC<FullScreenIntroProps> = ({ onEnter }) => {
@@ -58,7 +63,7 @@ const FullScreenIntro: React.FC<FullScreenIntroProps> = ({ onEnter }) => {
             {/* Bouton pour entrer dans le portfolio */}
             <Button
                 as={motion.button}
-                variants={itemVariants}
+                variants={lastItemVariants}
                 mt={8}
                 size="lg"
                 colorScheme="teal"
