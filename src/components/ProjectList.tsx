@@ -1,100 +1,44 @@
-import React, { useState, useEffect } from "react";
-import "../styles/projectList.css";
+import { useEffect, useState } from "react";
+import { SimpleGrid, Heading, Box } from "@chakra-ui/react";
+import ProjectCard from "./ProjectCard";
 
-interface Project {
-    id: number;
-    title: string;
-    description: string;
-    technologies: string[];
-    image: string;
-    link: string;
-}
-
-const ProjectList: React.FC = () => {
-    const [projects, setProjects] = useState<Project[]>([]);
+const ProjectList = () => {
+    const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        const fetchData = async () => {
+        const fetchGitHubRepos = async () => {
             try {
-                const response = await fetch("./src/projects.json");
+                const response = await fetch(
+                    "https://api.github.com/users/RemiPHILIPPOT/repos"
+                );
                 const data = await response.json();
-                setProjects(data.projects);
+                setProjects(data);
             } catch (error) {
-                console.error("Error fetching projects:", error);
+                console.error(
+                    "Erreur lors de la récupération des projets GitHub :",
+                    error
+                );
             }
         };
-
-        fetchData();
+        fetchGitHubRepos();
     }, []);
 
-    const ProjectCard: React.FC<Project> = ({
-        id,
-        title,
-        description,
-        technologies,
-        image,
-        link,
-    }) => {
-        const [showFullContent, setShowFullContent] = useState(false);
-
-        const toggleContent = () => {
-            setShowFullContent(!showFullContent);
-        };
-
-        return (
-            <div
-                className={`project-card ${showFullContent ? "expanded" : ""}`}
-                key={id}
-            >
-                {/* <h3>{title}</h3> */}
-                <img src={image} alt={`Capture d'écran de ${title}`} />
-
-                <p className="description">
-                    {showFullContent
-                        ? description
-                        : `${description.substring(0, 100)}...`}
-                </p>
-                <p className="technologies">
-                    Technologies : {technologies.join(", ")}
-                </p>
-                {/* <img src={image} alt={`Capture d'écran de ${title}`} /> */}
-                {!showFullContent && (
-                    <button className="see-more" onClick={toggleContent}>
-                        Voir plus
-                    </button>
-                )}
-                {showFullContent && (
-                    <button className="see-less" onClick={toggleContent}>
-                        Voir moins
-                    </button>
-                )}
-                {link !== "" ? (
-                    <a
-                        href={link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="project-link"
-                    >
-                        Voir le projet
-                    </a>
-                ) : (
-                    ""
-                )}
-            </div>
-        );
-    };
-
     return (
-        <div className="project">
-            <div className="project_title">
-                <span className="wave">Mes Projets</span>
-            </div>
-            <div className="project-container">
-                {projects.map((project) => (
-                    <ProjectCard key={project.id} {...project} />
+        <Box maxW="1200px" mx="auto" py={16} px={4}>
+            <Heading as="h2" size="xl" color="teal.400">
+                Mes Projets GitHub
+            </Heading>
+            <SimpleGrid columns={[1, 2, 3]} spacing={8} mt={8}>
+                {projects.map((project: any) => (
+                    <ProjectCard
+                        key={project.id}
+                        name={project.name}
+                        description={project.description}
+                        html_url={project.html_url}
+                    />
                 ))}
-            </div>
-        </div>
+            </SimpleGrid>
+        </Box>
     );
 };
 

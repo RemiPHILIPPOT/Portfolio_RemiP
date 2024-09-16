@@ -1,80 +1,76 @@
-// Header.tsx
-import React, { useEffect, useState } from "react";
-import "../styles/header.css";
-import { Link } from "react-router-dom";
-import LogoRp from "../logo/logo_rp.png";
+import { Box, Flex, Heading, Text, keyframes } from "@chakra-ui/react";
+import React from "react";
 
-interface Author {
-    firstName: string;
-    lastName: string;
-    description: string;
-    github: string;
-    githubLogo: string;
-    linkedin: string;
-    linkedinLogo: string;
-}
+// Animation keyframes
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
-const Header: React.FC = () => {
-    /*const navigate = useNavigate();
-
-    const handleNavigation = (to: string) => {
-        navigate(to);
-    };*/
-
-    const [author, setAuthor] = useState<Author | null>(null);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch("/src/projects.json");
-                const data = await response.json();
-                setAuthor(data.author);
-            } catch (error) {
-                console.error("Error fetching author:", error);
-            }
-        };
-
-        fetchData();
-    }, []);
-
+const Header = () => {
     return (
-        <header className="header">
-            <Link to="/">
-                <img className="logo" src={LogoRp} alt="Logo Rémi PHILIPPOT" />
-            </Link>
-            <nav className="header_nav">
-                <ul>
-                    <li className="header_link">
-                        <Link to="/">Accueil</Link>
-                    </li>
-                    <li className="header_link">
-                        <Link to="/projects">Projets</Link>
-                    </li>
-                </ul>
-            </nav>
-            {author && (
-                <div className="author-info">
-                    <h2>{`${author.firstName} ${author.lastName}`}</h2>
-                    <p>{author.description}</p>
-                    <div className="author_social">
-                        <a className="author_link" href={author.github}>
-                            <img
-                                className="author_logo"
-                                src={author.githubLogo}
-                                alt="Logo Github"
-                            />
-                        </a>
-                        <a className="author_link" href={author.linkedin}>
-                            <img
-                                className="author_logo"
-                                src={author.linkedinLogo}
-                                alt="Logo Linkedin"
-                            />
-                        </a>
-                    </div>
-                </div>
-            )}
-        </header>
+        <Box as="header" bg="gray.800" p={4}>
+            <Flex
+                justify="space-between"
+                align="center"
+                maxW="1200px"
+                mx="auto"
+            >
+                {/* Nom avec animation */}
+                <Heading
+                    as="h1"
+                    size="lg"
+                    color="teal.400"
+                    animation={`${fadeIn} 2s ease-in-out`}
+                >
+                    Rémi Philippot
+                </Heading>
+                {/* Menu de navigation */}
+                <Flex>
+                    <Text
+                        as="a"
+                        href="/"
+                        color="white"
+                        mr={4}
+                        _hover={{ color: "teal.300" }}
+                    >
+                        Accueil
+                    </Text>
+                    <Text
+                        as="a"
+                        href="/about"
+                        color="white"
+                        mr={4}
+                        _hover={{ color: "teal.300" }}
+                    >
+                        À propos
+                    </Text>
+                    <Text
+                        as="a"
+                        href="/projects"
+                        color="white"
+                        mr={4}
+                        _hover={{ color: "teal.300" }}
+                    >
+                        Projets
+                    </Text>
+                    <Text
+                        as="a"
+                        href="/contact"
+                        color="white"
+                        _hover={{ color: "teal.300" }}
+                    >
+                        Contact
+                    </Text>
+                </Flex>
+            </Flex>
+        </Box>
     );
 };
 
