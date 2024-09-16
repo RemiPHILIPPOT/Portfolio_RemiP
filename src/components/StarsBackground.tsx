@@ -1,4 +1,3 @@
-// StarsBackground.tsx
 import { useFrame } from "@react-three/fiber";
 import { Stars } from "@react-three/drei";
 import React, { useRef } from "react";
@@ -20,9 +19,9 @@ const StarsComponent = () => {
     return (
         <group ref={starsRef}>
             <Stars
-                radius={100}
-                depth={50}
-                count={5000}
+                radius={50}
+                depth={20}
+                count={10000}
                 factor={4}
                 saturation={0}
                 fade

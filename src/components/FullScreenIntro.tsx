@@ -31,8 +31,9 @@ const FullScreenIntro: React.FC<FullScreenIntroProps> = ({ onEnter }) => {
             justify="center"
             bg="gray.900"
             direction="column"
+            position="relative"
         >
-            {/* Phrase d'accroche */}
+            {/* Texte d'introduction */}
             <Text
                 as={motion.p}
                 variants={itemVariants}
@@ -54,7 +55,7 @@ const FullScreenIntro: React.FC<FullScreenIntroProps> = ({ onEnter }) => {
                 Rémi Philippot
             </Heading>
 
-            {/* Bouton pour entrer dans le site */}
+            {/* Bouton pour entrer dans le portfolio */}
             <Button
                 as={motion.button}
                 variants={itemVariants}

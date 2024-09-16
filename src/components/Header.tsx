@@ -1,73 +1,29 @@
-import { Box, Flex, Heading, Text, keyframes } from "@chakra-ui/react";
-
-// Animation keyframes
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
+import { Box, Flex, Link } from "@chakra-ui/react";
+import { Link as ScrollLink } from "react-scroll";
 
 const Header = () => {
     return (
-        <Box as="header" bg="gray.800" p={4}>
-            <Flex
-                justify="space-between"
-                align="center"
-                maxW="1200px"
-                mx="auto"
-            >
-                {/* Nom avec animation */}
-                <Heading
-                    as="h1"
-                    size="lg"
-                    color="teal.400"
-                    animation={`${fadeIn} 2s ease-in-out`}
-                >
-                    Rémi Philippot
-                </Heading>
-                {/* Menu de navigation */}
-                <Flex>
-                    <Text
-                        as="a"
-                        href="/"
-                        color="white"
-                        mr={4}
-                        _hover={{ color: "teal.300" }}
-                    >
-                        Accueil
-                    </Text>
-                    <Text
-                        as="a"
-                        href="/about"
-                        color="white"
-                        mr={4}
-                        _hover={{ color: "teal.300" }}
-                    >
-                        À propos
-                    </Text>
-                    <Text
-                        as="a"
-                        href="/projects"
-                        color="white"
-                        mr={4}
-                        _hover={{ color: "teal.300" }}
-                    >
-                        Projets
-                    </Text>
-                    <Text
-                        as="a"
-                        href="/contact"
-                        color="white"
-                        _hover={{ color: "teal.300" }}
-                    >
-                        Contact
-                    </Text>
-                </Flex>
+        <Box
+            as="header"
+            position="fixed"
+            top="0"
+            w="100%"
+            bg="gray.800"
+            zIndex="10"
+        >
+            <Flex as="nav" justify="space-around" p={4} color="white">
+                <ScrollLink to="home" smooth={true} offset={-50}>
+                    <Link cursor="pointer">Accueil</Link>
+                </ScrollLink>
+                <ScrollLink to="about" smooth={true} offset={-50}>
+                    <Link cursor="pointer">À propos</Link>
+                </ScrollLink>
+                <ScrollLink to="projects" smooth={true} offset={-50}>
+                    <Link cursor="pointer">Projets</Link>
+                </ScrollLink>
+                <ScrollLink to="contact" smooth={true} offset={-50}>
+                    <Link cursor="pointer">Contact</Link>
+                </ScrollLink>
             </Flex>
         </Box>
     );
